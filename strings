@@ -1,0 +1,144 @@
+Remove Consecutive Duplicates
+Given a string, S, remove all the consecutive duplicates that are present in the given string. 
+That means, if 'aaa' is present in the string then it should become 'a' in the output string.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from sys import stdin
+
+def removeConsecutiveDuplicates(string) :
+    string=string+' '
+    n=len(string)
+    new=''
+    for i in range(n-1):
+        if string[i]!=string[i+1]:
+            new+=(string[i])+''
+    return new
+
+	
+
+
+	
+
+
+#main
+string = stdin.readline().strip()
+
+ans = removeConsecutiveDuplicates(string)
+
+print(ans)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Reverse Each Word
+Send Feedback
+Aadil has been provided with a sentence in the form of a string as a function parameter. 
+The task is to implement a function so as to print the sentence such that each word in the sentence is reversed.
+
+
+from sys import stdin
+
+
+def reverseEachWord(string) :
+    # Your code goes here
+    new=''
+    for s in string.split():
+        new+=s[::-1]+" "
+
+    return new
+
+#main
+string = stdin.readline().strip()
+
+ans = reverseEachWord(string)
+
+print(ans)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Remove character
+Send Feedback
+For a given a string(str) and a character X, write a function to remove all the occurrences of X from the given string.
+The input string will remain unchanged if the given character(X) doesn't exist in the input string.
+
+
+from sys import stdin
+
+
+def removeAllOccurrencesOfChar(string, ch) :
+	# Your code goes here
+    if ch in string:
+        temp=string.replace(ch,'')
+        return temp
+    else:
+        return string
+
+#main
+string = stdin.readline().strip()
+ch = stdin.readline().strip()[0]
+
+ans = removeAllOccurrencesOfChar(string, ch)
+
+print(ans)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+compress a consecutive letters of a string
+
+
+def getCompressedString(string):
+    new=''
+    i=0
+    n=len(string)
+    while (i<n) :	
+        j=i+1
+        c=1
+        while(j<n and string[i]==string[j]):
+            c+=1
+            j+=1
+
+        if c==1:
+            new+=string[i]
+        else:
+            new+=string[i]+str(c)
+        i=j
+    return new
+            
+  
+    
+ar=getCompressedString(input())
+print(ar)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Highest Occuring Element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
